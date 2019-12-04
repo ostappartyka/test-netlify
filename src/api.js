@@ -8,7 +8,7 @@ router.get("/", (req, res) => {
   res.json('TEST');
 });
 
-app.use(`/netlify/`, router);
+app.use(`/.netlify/functions/api`, router);
 
 module.exports = app;
 module.exports.handler = serverless(app);
